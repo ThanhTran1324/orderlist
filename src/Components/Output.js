@@ -24,7 +24,7 @@ class Output extends React.Component {
         return (
             <div className="form-group">
                 <CopyToClipboard text={this.renderTextOutPut()}>
-                    <button  onClick={this.copied} className="btn btn-dark btn-block block_button" >Copy Message</button>
+                    <button  onClick={this.copied} className="btn btn-dark btn-block block_button" >Click To Copy Message</button>
                 </CopyToClipboard>
                 
                 
