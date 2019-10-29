@@ -28,9 +28,3 @@ export const reset = () => {
         type:"RESET"
     };
 };
-
-export const createMessage = () =>{
-    return {
-        type:"CREATE_MESSAGE"
-    };
-};

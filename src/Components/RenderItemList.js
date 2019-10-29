@@ -14,15 +14,16 @@ class RenderItemList extends React.Component {
         return this.props.items.map ( (item,index) => {
             
                     return (
-                    <tr key={index}>
+                    <tr key={index} >
                             <td>{item.name}</td>
-                            <td>
+                            <td style={{"textAlign":"center"}}> 
+                                
                                 <button onClick={() =>this.props.increase(index)} className="btn btn-success"><h4>+</h4></button>
-                                 {item.qty}
+                                 -{item.qty}-
                                 <button onClick={() =>this.props.decrease(index)} className="btn btn-danger"><h4>-</h4></button>
                                 
                             </td>
-                            <td>{item.unit}</td>
+                            <td style={{"textAlign":"center"}}>{item.unit}</td>
                     </tr>
                     );
                 }

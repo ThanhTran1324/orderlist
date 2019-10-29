@@ -16,7 +16,7 @@ export default (state = KGI_Item_List , action) => {
                 }
                 return item;
             });
-            console.log(KGI_Item_List,state);
+            
         window.localStorage.setItem('CGI_items', JSON.stringify(newstate));
         return newstate;
 
@@ -41,10 +41,10 @@ export default (state = KGI_Item_List , action) => {
         case "RESET": 
         //console.log("reset");
         //console.log(KGI_Item_List);
-            state=KGI_Item_List;
-            window.localStorage.setItem('CGI_items', JSON.stringify(state));
+            newstate=KGI_Item_List;
+            window.localStorage.setItem('CGI_items', JSON.stringify(newstate));
             window.location.reload();
-            return state;
+            return newstate;
 
        
 

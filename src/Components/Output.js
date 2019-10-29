@@ -7,14 +7,17 @@ class Output extends React.Component {
         
         var textoutput="";
         this.props.items.map(function(item){
-            return textoutput = textoutput + item.name +" " + item.qty + " "+ item.unit +` ,\n` ;
+            if(item.qty>0)
+                return textoutput = textoutput + item.name +" " + item.qty + " "+ item.unit +` ,\n` ;
+            else
+                return '';
             }
         );
         
         return textoutput;
     };
     copied = () =>{
-        alert("thanks");
+        alert("Thank You For Using My Web-App.");
     };
     render(){
         

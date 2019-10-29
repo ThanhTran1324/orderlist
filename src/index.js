@@ -16,12 +16,12 @@ export class App extends Component {
         return (
             <Provider store={store}>
                 
-                <table className="table table-secondary">
+                <table className="table table-secondary table-bordered">
                     <thead>
                         <tr>
-                            <th>Name: </th>
-                            <th>Qty: </th>
-                            <th>Unit: </th>
+                            <th style={{"width":"50%"}} >Name: </th>
+                            <th style={{"textAlign":"center"}} >Qty: </th>
+                            <th style={{"textAlign":"center"}} >Unit: </th>
                         </tr>
                     </thead>
                         <RenderItemList />
