@@ -111,7 +111,7 @@ export const KGI_Item_List = [
         unit:"cs"
     },
     {
-        name:"Rice Vin",
+        name:"Rice Vinegar",
         qty:0,
         unit:"ct"
     },
@@ -191,7 +191,7 @@ export const KGI_Item_List = [
         unit:"pk"
     },
     {
-        name:"Soft Shell Crab 1cs/6pk",
+        name:"Soft Shell Crab",
         qty:0,
         unit:"pk"
     },
