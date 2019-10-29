@@ -17,7 +17,7 @@ class Output extends React.Component {
         return textoutput;
     };
     copied = () =>{
-        alert("Thank You For Using My Web-App.");
+        alert(`Thank You For Using My Web-App.\nEmail: ThanhTran1324@gmail.com`);
     };
     render(){
         
