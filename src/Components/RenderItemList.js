@@ -12,14 +12,14 @@ class RenderItemList extends React.Component {
 
     renderItem = () => {
         return this.props.items.map ( (item,index) => {
-            console.log(item);
+            
                     return (
                     <tr key={index}>
                             <td>{item.name}</td>
                             <td>
-                                <button onClick={() =>this.props.increase(index)} className="btn btn-success"> + </button>
-                                : {item.qty}
-                                <button onClick={() =>this.props.decrease(index)} className="btn btn-danger"> - </button>
+                                <button onClick={() =>this.props.increase(index)} className="btn btn-success"><h4>+</h4></button>
+                                 {item.qty}
+                                <button onClick={() =>this.props.decrease(index)} className="btn btn-danger"><h4>-</h4></button>
                                 
                             </td>
                             <td>{item.unit}</td>

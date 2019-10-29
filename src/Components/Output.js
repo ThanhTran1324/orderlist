@@ -1,24 +1,30 @@
 import React from 'react';
 import {connect} from "react-redux";
-
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 class Output extends React.Component {
-
     
     renderTextOutPut = () =>{
         
         var textoutput="";
         this.props.items.map(function(item){
             return textoutput = textoutput + item.name +" " + item.qty + " "+ item.unit +` ,\n` ;
-        }
+            }
         );
+        
         return textoutput;
+    };
+    copied = () =>{
+        alert("thanks");
     };
     render(){
         
         return (
             <div className="form-group">
-                <label >Your Message : </label>
-                <button >Copy Button</button>
+                <CopyToClipboard text={this.renderTextOutPut()}>
+                    <button  onClick={this.copied} className="btn btn-dark btn-block block_button" >Copy Message</button>
+                </CopyToClipboard>
+                
+                
                 <textarea style={{width: "100%", height:"500px"  }} className="form-control" id="textOutPut" readOnly value={this.renderTextOutPut()}>
                     
                 </textarea>

@@ -12,7 +12,7 @@ import Output from './Components/Output';
 export class App extends Component {
     
     render(){
-        const store = createStore(reducer);
+        const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
         return (
             <Provider store={store}>
                 
@@ -26,8 +26,9 @@ export class App extends Component {
                     </thead>
                         <RenderItemList />
                 </table>
-                <CreateResetButton />
+                
                 <Output />
+                <CreateResetButton />
             </Provider>
         );
     }
