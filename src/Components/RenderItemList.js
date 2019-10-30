@@ -16,11 +16,9 @@ class RenderItemList extends React.Component {
                     return (
                     <tr key={index} >
                             <td >{item.name}</td>
-                            <td style={{"textAlign":"center"}}> 
-                                
+                            <td style={{"textAlign":"center"}}>      
                                 <button onClick={() =>this.props.decrease(index)} className="btn btn-danger"><h4>-</h4></button>
-                                 <h7 className="font-weight-bold">{item.qty}</h7>
-
+                                 <span className="font-weight-bold">{item.qty}</span>
                                 <button onClick={() =>this.props.increase(index)} className="btn btn-success"><h4>+</h4></button>
                             </td>
                             <td style={{"textAlign":"center"}}>{item.unit}</td>
