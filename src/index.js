@@ -19,9 +19,9 @@ export class App extends Component {
                 <table className="table table-secondary table-bordered">
                     <thead>
                         <tr>
-                            <th style={{"width":"50%"}} >Name: </th>
-                            <th style={{"textAlign":"center"}} >Qty: </th>
-                            <th style={{"textAlign":"center"}} >Unit: </th>
+                            <th style={{"width":"40%"}} >Name: </th>
+                            <th style={{"textAlign":"center","width":"50%"}} >Qty: </th>
+                            <th style={{"textAlign":"center","width":"10%"}} >Unit: </th>
                         </tr>
                     </thead>
                         <RenderItemList />
