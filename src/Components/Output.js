@@ -8,7 +8,7 @@ class Output extends React.Component {
         var textoutput="";
         this.props.items.map(function(item){
             if(item.qty>0)
-                return textoutput = textoutput + item.name +" - " + item.qty + " "+ item.unit +` ,\n` ;
+                return textoutput = textoutput + item.name +" - " + item.qty + " "+ item.unit +`\n` ;
             else
                 return '';
             }
@@ -17,7 +17,7 @@ class Output extends React.Component {
         return textoutput;
     };
     copied = () =>{
-        alert(`Thank You For Using My Web-App.\nEmail: ThanhTran1324@gmail.com`);
+        alert(`Copied - Thank You For Using My Web-App.\nEmail: ThanhTran1324@gmail.com`);
     };
     render(){
         
