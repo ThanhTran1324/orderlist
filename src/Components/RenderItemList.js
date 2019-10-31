@@ -5,18 +5,15 @@ import {increase, decrease, loadItemFromLocalStorage} from '../actions';
 
 
 class RenderItemList extends React.Component {
-
     componentDidMount(){
         this.props.loadItemFromLocalStorage();
     };
-
     renderItem = () => {
         return this.props.items.map ( (item,index) => {
-            
                     return (
                     <tr key={index} >
-                            <td >{item.name}</td>
-                            <td style={{"textAlign":"center"}}>      
+                            <td >{item.name} {item.par}</td>
+                            <td style={{"textAlign":"center"}}>
                                 <button onClick={() =>this.props.decrease(index)} className="btn btn-danger"><h4>-</h4></button>
                                  <span className="font-weight-bold">{item.qty}</span>
                                 <button onClick={() =>this.props.increase(index)} className="btn btn-success"><h4>+</h4></button>

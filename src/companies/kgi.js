@@ -71,17 +71,20 @@ export const KGI_Item_List = [
         unit:"Case"
     },
     {
-        name:"Katsou Bushi - Bonito Flakes",
+        name:"Katsou Bushi",
+        par:" - Bonito Flakes",
         qty:0,
         unit:"Pack"
     },
     {
-        name:"Furikake - Fish Seasoning",
+        name:"Furikake",
+        par:" - Fish Seasoning",
         qty:0,
         unit:"Pack"
     },
     {
-        name:"Dried Wakame - Miso",
+        name:"Dried Wakame",
+        par:" - Miso",
         qty:0,
         unit:"Pack"
     },
@@ -171,7 +174,8 @@ export const KGI_Item_List = [
         unit:"Pack"
     },
     {
-        name:"Wasabi Tobikko - Green",
+        name:"Wasabi Tobikko",
+        par:" - Green",
         qty:0,
         unit:"Pack"
     },
@@ -181,12 +185,14 @@ export const KGI_Item_List = [
         unit:"Pack"
     },
     {
-        name:"Yuzu Tobikko - Yellow",
+        name:"Yuzu Tobikko",
+        par:" - Yellow",
         qty:0,
         unit:"Pack"
     },
     {
-        name:"Hokkaido Scallop (box)",
+        name:"Hokkaido Scallop",
+        par:" - box",
         qty:0,
         unit:"Pack"
     },
@@ -206,7 +212,8 @@ export const KGI_Item_List = [
         unit:"Pack"
     },
     {
-        name:"Nobashi ebi - stretch shrimp",
+        name:"Nobashi ebi",
+        par:" - stretch shrimp",
         qty:0,
         unit:"Case"
     },
@@ -221,7 +228,8 @@ export const KGI_Item_List = [
         unit:"Pack"
     },
     {
-        name:"Norwegian Mackerel - Saba",
+        name:"Norwegian Mackerel",
+        par:" - Saba",
         qty:0,
         unit:"Case"
     },
@@ -236,7 +244,8 @@ export const KGI_Item_List = [
         unit:"Count"
     },
     {
-        name:"Ikura - Salmon Roe",
+        name:"Ikura",
+        par:" - Salmon Roe",
         qty:0,
         unit:"Pack"
     },
