@@ -6,7 +6,7 @@ export default (state = KGI_Item_List, action) => {
     case "INCREASE":
       newstate = state.map((item, index) => {
         if (index === action.payload) {
-          if (index === 42) item.qty = item.qty + 0.5;
+          if (index === 42 || index === 49) item.qty = item.qty + 0.5;
           else item.qty = item.qty + 1;
         }
         return item;
@@ -17,9 +17,10 @@ export default (state = KGI_Item_List, action) => {
 
     case "DECREASE":
       newstate = state.map((item, index) => {
-        if (index === action.payload && item.qty - 1 >= 0) {
-          if (index === 42) item.qty = item.qty - 0.5;
-          else item.qty = item.qty - 1;
+        if (index === action.payload) {
+          if ((index === 42 || index === 49) && item.qty - 0.5 >= 0)
+            item.qty = item.qty - 0.5;
+          else if (item.qty - 1 >= 0) item.qty = item.qty - 1;
         }
         return item;
       });
