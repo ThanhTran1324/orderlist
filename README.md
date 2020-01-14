@@ -1,3 +1,5 @@
+Public at: https://thanhtran1324.github.io/orderlist/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
