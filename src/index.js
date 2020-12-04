@@ -5,8 +5,9 @@ import { Provider } from "react-redux";
 
 import reducer from "./reducers";
 import RenderItemList from "./Components/RenderItemList";
-import CreateResetButton from "./Components/CreateResetButton";
 import Output from "./Components/Output";
+import SelectCompany from "./Components/SelectCompany";
+import Navbar from "./Components/Navbar";
 
 export class App extends Component {
   render() {
@@ -17,20 +18,23 @@ export class App extends Component {
     );
     return (
       <Provider store={store}>
-        <h1 className="text-center ">Seito - Make Order To KGI</h1>
-
-        <table className="table table-striped table-dark">
-          <thead>
-            <tr>
-              <th style={{ width: "40%" }}>Name: </th>
-              <th style={{ textAlign: "center", width: "50%" }}>Qty: </th>
-              <th style={{ textAlign: "center", width: "10%" }}>Unit: </th>
-            </tr>
-          </thead>
-          <RenderItemList />
-        </table>
-        <Output />
-        <CreateResetButton />
+		<Navbar  />
+	   <div className="row no-gutters">   
+			<div className="col-12 col-lg-10 col-xl-8 mx-auto">
+			<SelectCompany />
+				<table className="table table-striped table-dark text-center myCustomTable">
+				<thead>
+					<tr>
+						<th style={{ width: "40%" }}>Name: </th>
+						<th style={{ width: "50%" }}>Qty: </th>
+						<th style={{ width: "10%" }}>Unit: </th>
+					</tr>
+				</thead>
+				<RenderItemList />
+				</table>
+			<Output />
+			</div>
+		</div>
       </Provider>
     );
   }

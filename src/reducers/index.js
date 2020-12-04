@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import items from './itemReducer'
+import state from './itemReducer';
 export default combineReducers({
-    items: items
+    companyList: state
 });

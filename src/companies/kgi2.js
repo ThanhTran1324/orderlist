@@ -1,6 +1,6 @@
-export const KGI_Item_List = [
+export const KGI_Item_List_2 = [
     {
-        name:"Wakame Salad",
+        name:"kgi 2",
         qty:0,
         unit:"Pack"
     },

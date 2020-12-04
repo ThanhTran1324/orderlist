@@ -1,22 +1,32 @@
 import { KGI_Item_List } from "../companies/kgi";
+import { KGI_Item_List_2 } from "../companies/kgi2";
 
-export default (state = KGI_Item_List, action) => {
-  let newstate = [];
+const initialState = {
+	companies: {
+	kgi: KGI_Item_List ,
+	kgi2: KGI_Item_List_2
+	},
+	items: KGI_Item_List
+};
+
+export default (state = initialState, action) => {
+  let newItemList = [];
   switch (action.type) {
     case "INCREASE":
-      newstate = state.map((item, index) => {
-        if (index === action.payload) {
-          if (index === 42 || index === 49) item.qty = item.qty + 0.5;
-          else item.qty = item.qty + 1;
-        }
-        return item;
-      });
-
-      window.localStorage.setItem("CGI_items", JSON.stringify(newstate));
-      return newstate;
+		newItemList = [...state.items];
+		if (action.payload === 42 || action.payload === 49) {
+			newItemList[action.payload].qty= newItemList[action.payload].qty + 0.5; 
+		}else{
+			newItemList[action.payload].qty++; 
+		}
+      return {
+		  ...state,
+		  items: newItemList
+	  };
 
     case "DECREASE":
-      newstate = state.map((item, index) => {
+		newItemList = [...state.items];
+		newItemList.map((item, index) => {
         if (index === action.payload) {
           if ((index === 42 || index === 49) && item.qty - 0.5 >= 0)
             item.qty = item.qty - 0.5;
@@ -24,21 +34,24 @@ export default (state = KGI_Item_List, action) => {
         }
         return item;
       });
-      window.localStorage.setItem("CGI_items", JSON.stringify(newstate));
-      return newstate;
-
-    case "LOADITEMFROMFLOCALSTORAGE":
-      if (localStorage && localStorage.getItem("CGI_items"))
-        return JSON.parse(localStorage.getItem("CGI_items"));
-      else return state;
+	  return {
+		...state,
+		items: newItemList
+	};
 
     case "RESET":
-      //console.log("reset");
-      //console.log(KGI_Item_List);
-      newstate = KGI_Item_List;
-      window.localStorage.setItem("CGI_items", JSON.stringify(newstate));
-      window.location.reload();
-      return newstate;
+		newItemList = [...state.items];
+		newItemList.map( e =>  e.qty=0 );
+		return {
+			...state,
+			items: newItemList
+		};
+	  
+	case 'SETCOMPANY':
+		return {
+			...state,
+			items: state.companies[action.payload]
+		};
 
     default:
       return state;

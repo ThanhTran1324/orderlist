@@ -4,6 +4,15 @@ body {
   font-family: "Armata", sans-serif;
 }
 
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.myNavbar {
+	background-color: rgb(207, 207, 207);
+}
+
 .block_button {
   margin-bottom: 2px;
   margin-top: -14px;
@@ -15,30 +24,44 @@ body {
 }
 
 .text-animated-down {
-  animation: moveInTop 2s ease-out;
+  animation: moveInTop 1s ease-in-out;
   animation-fill-mode: backwards;
 }
 
 .btn-animated {
-  animation: moveInBottom 2s ease-out;
+  animation: moveInBottom 1s ease-in-out;
   animation-fill-mode: backwards;
 }
 
 .btn-animated-down {
-  animation: moveInTop 2s ease-out;
+  animation: moveInTop 1s ease-in-out;
   animation-fill-mode: backwards;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.custom-select {
+	text-align-last: center;
+    font-weight: 700;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.myCustomTable {
+	margin: 0;
+}
+
+.ButtonGroupFullWidth {
+	width: 100%;
+}
+
+.ButtonGroupFullWidth button {
+	width: 50%;
 }
 
 /* dfsdf,,, */
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
 
   100% {
@@ -50,7 +73,7 @@ body {
 @keyframes moveInTop {
   0% {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-20px);
   }
 
   100% {
