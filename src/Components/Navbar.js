@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import { reset } from '../actions/index';
+import SelectCompany from './SelectCompany';
 
 export class Navbar extends Component {
 	renderTextOutPut = () => {
@@ -22,7 +23,7 @@ export class Navbar extends Component {
 		return textoutput;
 	};
 
-	copied = () => {
+	onCopy = () => {
 		alert(
 			`Copied - Thank You For Using My Web-App.\nEmail: ThanhTran1324@gmail.com`
 		);
@@ -33,22 +34,25 @@ export class Navbar extends Component {
 			<div className="row no-gutters">
 				<div className="nav myNavbar col-12 col-lg-10 col-xl-8 mx-auto">
 					<p className="header">Seito - Order Creater</p>
-					<CopyToClipboard text={this.renderTextOutPut()}>
-						<div className="navButtons btn-group navbar-nav ml-auto">
-							<button
-								onClick={this.copied}
-								className="btn btn-success"
+					<div className="navButtons">
+						<SelectCompany />
+						<div>
+							<CopyToClipboard
+								onCopy={this.onCopy}
+								text={this.renderTextOutPut}
 							>
-								Copy Output
-							</button>
+								<button className="btn btn-secondary ">
+									Copy
+								</button>
+							</CopyToClipboard>
 							<button
 								onClick={this.props.reset}
-								className="btn btn-danger"
+								className="btn btn-secondary "
 							>
 								Reset
 							</button>
 						</div>
-					</CopyToClipboard>
+					</div>
 				</div>
 			</div>
 		);

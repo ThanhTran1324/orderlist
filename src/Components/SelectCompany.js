@@ -14,8 +14,8 @@ class SelectCompany extends Component {
 			<select
 				id="inlineFormCustomSelect"
 				onChange={this.selectCompany}
-				defaultValue="1"
-				className="custom-select "
+				defaultValue="kgi"
+				className="company-select custom-select"
 			>
 				{this.props.companyList.map((company) => (
 					<option key={company} value={company}>

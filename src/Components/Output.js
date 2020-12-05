@@ -22,7 +22,7 @@ class Output extends React.Component {
 	render() {
 		return (
 			<textarea
-				style={{ width: '100%', height: '600px' }}
+				style={{ width: '100%', height: '70vh' }}
 				className="form-control"
 				id="textOutPut"
 				readOnly

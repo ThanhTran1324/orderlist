@@ -19,7 +19,9 @@ class RenderItemList extends React.Component {
 						>
 							<h4>-</h4>
 						</button>
-						<span className="font-weight-bold">{item.qty}</span>
+						<span className="font-weight-bold table--item-qty">
+							{item.qty}
+						</span>
 						<button
 							onClick={() => this.props.increase(index)}
 							className="btn btn-success smallBtn btn-animated-down"

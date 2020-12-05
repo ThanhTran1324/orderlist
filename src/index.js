@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import reducer from './reducers';
 import RenderItemList from './Components/RenderItemList';
 import Output from './Components/Output';
-import SelectCompany from './Components/SelectCompany';
 import Navbar from './Components/Navbar';
 
 export class App extends Component {
@@ -21,8 +20,7 @@ export class App extends Component {
 				<div className="row no-gutters">
 					<div className="col-12 col-lg-10 col-xl-8 mx-auto">
 						<Navbar />
-						<SelectCompany />
-						<table className="table table-striped table-dark text-center myCustomTable">
+						<table className="table table-striped table-dark  myCustomTable">
 							<thead>
 								<tr>
 									<th style={{ width: '40%' }}>Name: </th>
