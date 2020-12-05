@@ -7,6 +7,7 @@ body {
 * {
 	padding: 0;
 	margin: 0;
+	touch-action: manipulation !important;
 }
 
 .myNavbar {
@@ -27,7 +28,6 @@ body {
 
 .navButtons {
 	margin: auto;
-	float: right;
 	display: inline-block;
 }
 
@@ -37,7 +37,6 @@ body {
 }
 
 .smallBtn {
-	touch-action: manipulation;
 	width: 40px !important;
 	height: 40px !important;
 }
