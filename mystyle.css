@@ -10,14 +10,19 @@ body {
 	touch-action: manipulation !important;
 }
 
+.btn:focus {
+	outline: none;
+	box-shadow: none;
+}
+
 .myNavbar {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 40px;
 	background-color: rgb(207, 207, 207);
 	padding: 0;
+	height: 70px;
 }
 
 .header {
@@ -28,7 +33,20 @@ body {
 
 .navButtons {
 	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-items: start;
+	align-items: stretch;
+}
+
+.myCustomTable {
+	margin-top: 70px;
+}
+
+.table--item-qty {
+	width: 32px;
 	display: inline-block;
+	text-align: center;
 }
 
 .block_button {
@@ -37,6 +55,7 @@ body {
 }
 
 .smallBtn {
+	display: inline-block;
 	width: 40px !important;
 	height: 40px !important;
 }
@@ -56,20 +75,10 @@ body {
 	animation-fill-mode: backwards;
 }
 
-.custom-select {
-	margin-top: 40px;
-	text-align-last: center;
+.company-select {
+	width: 100px;
 	font-weight: 700;
-	font-size: 20px;
 	text-transform: uppercase;
-}
-
-.myCustomTable {
-	margin: 0;
-}
-
-.ButtonGroupFullWidth button {
-	width: 50%;
 }
 
 /* dfsdf,,, */
