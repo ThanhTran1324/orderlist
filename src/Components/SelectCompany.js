@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
 import { setCompany, reset } from '../actions/index';
 
@@ -8,23 +8,31 @@ class SelectCompany extends Component {
 		const selected = document.getElementById('inlineFormCustomSelect');
 		this.props.reset();
 		this.props.setCompany(selected.value);
-	}
+	};
 	render() {
 		return (
-				<select id="inlineFormCustomSelect" onChange={this.selectCompany} defaultValue="1" className="custom-select ">
-					{this.props.companyList.map(company => <option key={company} value={company}>{company}</option>)}
-				</select>
-		)
+			<select
+				id="inlineFormCustomSelect"
+				onChange={this.selectCompany}
+				defaultValue="1"
+				className="custom-select "
+			>
+				{this.props.companyList.map((company) => (
+					<option key={company} value={company}>
+						{company}
+					</option>
+				))}
+			</select>
+		);
 	}
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
 	return {
-		companyList: Object.keys(state.companyList.companies)
+		companyList: Object.keys(state.companyList.companies),
 	};
 };
-export default connect(mapStateToProps,{
+export default connect(mapStateToProps, {
 	reset,
-	setCompany
-  })(SelectCompany);
-  
+	setCompany,
+})(SelectCompany);

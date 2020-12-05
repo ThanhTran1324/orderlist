@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Armata&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Armata&display=swap');
 
 body {
-  font-family: "Armata", sans-serif;
+	font-family: 'Armata', sans-serif;
 }
 
 * {
@@ -10,37 +10,57 @@ body {
 }
 
 .myNavbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
 	background-color: rgb(207, 207, 207);
+	padding: 0;
+}
+
+.header {
+	font-size: 16px;
+	font-weight: 700;
+	margin: auto;
+}
+
+.navButtons {
+	margin: auto;
+	float: right;
+	display: inline-block;
 }
 
 .block_button {
-  margin-bottom: 2px;
-  margin-top: -14px;
+	margin-bottom: 2px;
+	margin-top: -14px;
 }
 
 .smallBtn {
-  width: 40px !important;
-  height: 40px !important;
+	touch-action: manipulation;
+	width: 40px !important;
+	height: 40px !important;
 }
 
 .text-animated-down {
-  animation: moveInTop 1s ease-in-out;
-  animation-fill-mode: backwards;
+	animation: moveInTop 1s ease-in-out;
+	animation-fill-mode: backwards;
 }
 
 .btn-animated {
-  animation: moveInBottom 1s ease-in-out;
-  animation-fill-mode: backwards;
+	animation: moveInBottom 1s ease-in-out;
+	animation-fill-mode: backwards;
 }
 
 .btn-animated-down {
-  animation: moveInTop 1s ease-in-out;
-  animation-fill-mode: backwards;
+	animation: moveInTop 1s ease-in-out;
+	animation-fill-mode: backwards;
 }
 
 .custom-select {
+	margin-top: 40px;
 	text-align-last: center;
-    font-weight: 700;
+	font-weight: 700;
 	font-size: 20px;
 	text-transform: uppercase;
 }
@@ -49,35 +69,31 @@ body {
 	margin: 0;
 }
 
-.ButtonGroupFullWidth {
-	width: 100%;
-}
-
 .ButtonGroupFullWidth button {
 	width: 50%;
 }
 
 /* dfsdf,,, */
 @keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
 
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
 
 @keyframes moveInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
 
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
