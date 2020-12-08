@@ -39,7 +39,7 @@ export class Navbar extends Component {
 						<div>
 							<CopyToClipboard
 								onCopy={this.onCopy}
-								text={this.renderTextOutPut}
+								text={this.renderTextOutPut()}
 							>
 								<button className="btn btn-secondary ">
 									Copy
